@@ -1,0 +1,312 @@
+<html>
+
+<head>
+
+<title>Career Assessment Quiz</title>
+
+</head>
+
+<body>
+
+<center><h1>Quiz Questions</h1></center>
+
+<p>
+
+<form name="quiz">
+
+<p>
+
+<b>Question 1.
+
+<br>Which one of the skills will be suited role for you?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q1" value="Providing the information and helping to the people to understand and interpret it, in every field like Business, Teaching, Advisory and others">Providing the information and helping to the people to understand and interpret it, in every field like Business, Teaching, Advisory and others<br>
+
+<input type="radio" name="q1" value="Design, create and create things by using the skills like science, engineering, and math ">Design, create and create things by using the skills like science, engineering, and math <br>
+
+<input type="radio" name="q1" value="Solving the challenge by using different kind if technology and digital program">Solving the challenge by using different kind if technology and digital program<br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 2.
+
+<br>Which of the role would you like to enjoy.<br></b>
+
+<blockquote>
+
+<input type="radio" name="q2" value="Working as the sound engineering, audio engineering and making a suitable sound the shows">Working as the sound engineering, audio engineering and making a suitable sound the shows<br>
+
+<input type="radio" name="q2" value="As teaching actors and working as a language coach">As teaching actors and working as a language coach<br>
+
+<input type="radio" name="q2" value="Playing as a role of the character on the stage or screen">Playing as a role of the character on the stage or screen<br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 3.
+
+<br>What your friend mentioned you are most interested in?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q3" value="Making new connection and bringing people together">Making new connection and bringing people together <br>
+
+<input type="radio" name="q3" value="Having interested on the houses and design how it looks like stylish and other">Having interested on the houses and design how it looks like stylish and other<br>
+
+<input type="radio" name="q3" value="">Having interested on the sports<br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 4.
+
+<br> On what things you want a invest your time?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q4" value="Playing with Pets like cat, dog and others">Playing with Pets like cat, dog and others<br>
+
+<input type="radio" name="q4" value="Exploring the new sites and location">Exploring the new sites and location<br>
+
+<input type="radio" name="q4" value="Filming and editing">Filming and editing<br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 5.
+
+<br> What is your strongest skillsets is mostly related to?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q5" value="Coaching or motivating other">Coaching or motivating other<br>
+
+<input type="radio" name="q5" value="Learning about the interesting new development in culture, politics, and every daily life">Learning about the interesting new development in culture, politics, and every daily life<br>
+
+<input type="radio" name="q5" value="Talking and entertaining to other arranging get together with friends">Talking and entertaining to other arranging get together with friends<br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 6.
+
+<br>Which types of the work you like the most?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q6" value="Working in lab experimenting where you must be very careful with the different chemical and create something meaningfu">Working in lab experimenting where you must be very careful with the different chemical and create something meaningful<br>
+
+<input type="radio" name="q6" value="Working in an animal care and plan for the conservation setting">Working in an animal care and plan for the conservation setting<br>
+
+<input type="radio" name="q6" value="Being a part of the working in an office which is growing business">Being a part of the working in an office which is growing business<br>
+
+</blockquote>
+
+<p><b>
+
+Question 7.
+
+<br>What subject will you find interesting and play your strength?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q7" value="Math, science, and engineering">Math, science, and engineering<br>
+
+<input type="radio" name="q7" value="Health, community studies, Early childhood, environmental studies ">Health, community studies, Early childhood, environmental studies <br>
+
+<input type="radio" name="q7" value="Retail studies, Hospitality, and business administration">Retail studies, Hospitality, and business administration<br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 8.
+
+<br>What you see in yourself?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q8" value="Designer">Designer <br>
+
+<input type="radio" name="q8" value="Handcrafter">Handcrafter<br>
+
+<input type="radio" name="q8" value="Technician">Technician<br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 9.
+
+<br> If you get chance to work in the match, what would you prefer to?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q9" value="Work with the team as healthcare team and providing the health fitness">Work with the team as healthcare team and providing the health fitness<br>
+
+<input type="radio" name="q9" value="Working with the technician team help to stream the game">Working with the technician team help to stream the game<br>
+
+<input type="radio" name="q9" value="Working with organizer to assembling the tents and stalls">Working with organizer to assembling the tents and stalls<br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+
+<p><b>
+
+<input type="button"value="Grade Me"onClick="getScore(this.form);">
+
+<input type="reset" value="Clear"><p>
+
+Number of score out of 9 = <input type= text size 15 name= "mark">
+
+Score in percentage = <input type=text size=15 name="percentage"><br>
+
+</form>
+
+<p>
+
+<form method="post" name="Form" onsubmit="" action="">
+
+</form>
+
+</body>
+
+<script>
+
+var numQues = 9;
+
+var numChoi = 3;
+
+var answers = new Array(9);
+
+answers[0] = "Solving the challenge by using different kind if technology and digital program";
+
+answers[1] = "Working as the sound engineering, audio engineering and making a suitable sound the shows";
+
+answers[2] = "Making new connection and bringing people together";
+
+answers[3] = "Exploring the new sites and location";
+
+answers[4] = "dCoaching or motivating other";
+
+answers[5] = "Working in an animal care and plan for the conservation setting";
+
+answers[6] = "Health, community studies, Early childhood, environmental studies";
+
+answers[7] = "Designer";
+
+answers[8] = "Working with organizer to assembling the tents and stalls";
+
+
+
+function getScore(form) {
+
+var score = 0;
+
+var currElt;
+
+var currSelection;
+
+for (i=0; i<numQues; i++) {
+
+currElt = i*numChoi;
+
+answered=false;
+
+for (j=0; j<numChoi; j++) {
+
+currSelection = form.elements[currElt + j];
+
+if (currSelection.checked) {
+
+answered=true;
+
+if (currSelection.value == answers[i]) {
+
+score++;
+
+break;
+
+}
+
+}
+
+}
+
+if (answered ===false){alert("Do answer all the questions, Please") ;return false;}
+
+}
+
+var scoreper = Math.round(score/numQues*100);
+
+form.percentage.value = scoreper + "%";
+
+form.mark.value=score;
+
+}
+
+</script>
+<form action="portals.html">
+        <button class = "button button1" type="submit" style="border: none;
+  color: #000;
+  background-color: orange;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 6px 2px;
+  cursor: pointer;
+  width: 320px;
+  position: relative;
+  left: 5%;
+} ">
+             Back To Assessment Tool
+        </button>
+    </form>
+	<form action="subscribe.html">
+        <button class = "button button1" type="submit" style="border: none;
+  color: #000;
+  background-color: orange;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 6px 2px;
+  cursor: pointer;
+  width: 320px;
+  position: relative;
+  left: 70%;
+  margin-top: -71px;
+} ">
+             Subscribe
+        </button>
+    </form>
+</html>
