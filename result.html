@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link media="all" rel="stylesheet" href="style2.css">
+    <title>Employability</title>
+</head>
+<body style="background-color: #000;">
+    <div class="quarter q-red"></div>
+    <div class="mid-section" style="background-color: transparent;">
+        <h1>CV Assessment Results</h1>
+        <div class="result-list">
+            <div class="result-row">
+                <div class="result-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 30px;">
+                        <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                    </svg>
+                    Impact
+                </div>
+                <div class="result-score">
+                    <input type="range" min="0" max="100" value="50" id="impactIp" 
+                        step="1" oninput="impactUpdate(value)">
+                    <output for="impactIp" id="impactOp">50/100</output>
+                </div>
+            </div>
+            <div class="result-row">
+                <div class="result-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width: 30px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                    </svg>
+                    Brevity
+                </div>
+                <div class="result-score">
+                    <input type="range" min="0" max="100" value="50" id="brevityIp" 
+                        step="1" oninput="brevityUpdate(value)">
+                    <output for="brevityIp" id="brevityOp">50/100</output>
+                </div>
+            </div>
+            <div class="result-row">
+                <div class="result-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width: 30px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                    Sections
+                </div>
+                <div class="result-score">
+                    <input type="range" min="0" max="100" value="50" id="sectionIp" 
+                        step="1" oninput="sectionUpdate(value)">
+                    <output for="sectionIp" id="sectionOp">50/100</output>
+                </div>
+            </div>
+            <div class="result-row">
+                <div class="result-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width: 30px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                    Soft Skills
+                </div>
+                <div class="result-score">
+                    <input type="range" min="0" max="100" value="50" id="softSkillsIp" 
+                        step="1" oninput="softSkillsUpdate(value)">
+                    <output for="softSkillsIp" id="softSkillsOp">50/100</output>
+                </div>
+            </div>
+        </div>
+        <div class="buttons-row">
+            <a class="button white-button" href="index.html">Go Back</a>
+            <a class="button white-button"  href="score.html">Subscribe</a>
+        </div>
+    </div>
+    <div class="quarter q-blue"></div>
+    <script type="application/javascript" src="main.js"></script>
+</body>
+</html>
