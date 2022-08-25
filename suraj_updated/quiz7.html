@@ -1,0 +1,278 @@
+<html>
+
+<head>
+
+<title>Dental Quiz</title>
+
+</head>
+
+<body>
+
+<!-------------This is the best Language translator---------->
+
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!--------ends here; the translator-------->
+
+<style>
+
+ @media only screen and (max-device-width: 1600px) {
+
+        
+    #google_translate_element {
+     
+   position: fixed;
+  top: 0px;
+  right: -7px;
+  z-index: 99;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 2px;
+}
+</style>
+<center><h1>Dental</h1></center>
+
+<p>
+
+<form name="quiz">
+
+<p>
+
+<b>Question 1.
+
+<br>What is halitosis?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q1" value="Dental filling">Dental fillings<br>
+
+<input type="radio" name="q1" value="Regular dental checkups">Regular dental checkups<br>
+
+<input type="radio" name="q1" value="Bad breath">Bad breath<br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 2.
+
+<br>What is gingivitis?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q2" value="Tooth erosion">Tooth erosion<br>
+
+<input type="radio" name="q2" value="Inflammation of the gums">Inflammation of the gums<br>
+
+<input type="radio" name="q2" value="Mouth sores">Mouth sores<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 3.
+
+<br>What is this procedure to replace a missing tooth termed as?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q3" value="Tooth-supported fixed bridge">Tooth-supported fixed bridge<br>
+
+<input type="radio" name="q3" value="Removal partial denture">Removable partial denture<br>
+
+<input type="radio" name="q3" value="Dental implant">Dental implant<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 4.
+
+<br>Which of the following procedures is considered as orthodontia?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q4" value="Teeth whitening">Teeth whitening<br>
+
+<input type="radio" name="q4" value="Dental bonding">Dental bonding<br>
+
+<input type="radio" name="q4" value="Braces installation">Braces installation<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 5.
+
+<br>Why would a patient require a root canal treatment?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q5" value="To treat diseases and injuries to the dental pulp so as to conserve a tooth that will otherwise have to be extracted">To treat diseases and injuries to the dental pulp so as to conserve a tooth that will otherwise have to be extracted<br>
+
+<input type="radio" name="q5" value="To correct the alignment of teeth and bite-related problems">To correct the alignment of teeth and bite-related problems<br>
+
+<input type="radio" name="q5" value="To repair chipped decayed or stained teeth and help in closing gaps between teeth">To repair chipped decayed or stained teeth and help in closing gaps between teeth<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 6.
+
+<br>By what age should a child have first dental checkup?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q6" value="4 years old">4 years old<br>
+
+<input type="radio" name="q6" value="1 year old">1 year old<br>
+
+<input type="radio" name="q6" value="3 years old">3 years old<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 7.
+
+<br>What kind of tooth is adapted for cutting? <br></b>
+
+<blockquote>
+
+<input type="radio" name="q7" value="Canine">Canine<br>
+
+<input type="radio" name="q7" value="Incisor">Incisor<br>
+
+<input type="radio" name="q7" value="Molar">Molar<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+
+
+
+<input type="button"value="Grade Me"onClick="getScore(this.form);">
+
+
+<input type="reset" value="Clear"><p>
+
+Number of score out of 7 = <input style="margin-bottom: 30px;" type= "text" size="15" name= "mark">
+
+Score in percentage = <input style="margin-bottom: 30px;" type="text" size="15" name="percentage"><br>
+
+</form>
+
+<p>
+
+<form method="post" name="Form" onsubmit="" action="">
+
+</form>
+
+</body>
+
+<script>
+
+var numQues = 7;
+
+var numChoi = 3;
+
+var answers = new Array(7);
+
+answers[0] = "Bad breath";
+
+answers[1] = "Inflammation of the gums";
+
+answers[2] = "Dental implant";
+
+answers[3] = "Braces installation";
+
+answers[4] = "To treat diseases and injuries to the dental pulp so as to conserve a tooth that will otherwise have to be extracted";
+
+answers[5] = "1 year old";
+
+answers[6] = "Gingivitis";
+
+
+
+
+function getScore(form) {
+
+var score = 0;
+
+var currElt;
+
+var currSelection;
+
+for (i=0; i<numQues; i++) {
+
+currElt = i*numChoi;
+
+answered=false;
+
+for (j=0; j<numChoi; j++) {
+
+currSelection = form.elements[currElt + j];
+
+if (currSelection.checked) {
+
+answered=true;
+
+if (currSelection.value == answers[i]) {
+
+score++;
+
+break;
+
+}
+
+}
+
+}
+
+if (answered ===false){alert("Do answer all the questions, Please") ;return false;}
+
+}
+
+var scoreper = Math.round(score/numQues*100);
+
+form.percentage.value = scoreper + "%";
+
+form.mark.value=score;
+
+}
+
+</script>
+
+</html>

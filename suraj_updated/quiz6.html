@@ -1,0 +1,278 @@
+<html>
+
+<head>
+
+<title>Developers/Programmers Quiz</title>
+
+</head>
+
+<body>
+
+<!-------------This is the best Language translator---------->
+
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!--------ends here; the translator-------->
+
+<style>
+
+ @media only screen and (max-device-width: 1600px) {
+
+        
+    #google_translate_element {
+     
+   position: fixed;
+  top: 0px;
+  right: -7px;
+  z-index: 99;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 2px;
+}
+</style>
+<center><h1>Developers/Programmers</h1></center>
+
+<p>
+
+<form name="quiz">
+
+<p>
+
+<b>Question 1.
+
+<br>In JavaScript, what method adds an element to the end of an array?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q1" value=".pop()">.pop()<br>
+
+<input type="radio" name="q1" value=".unshift()">unshift()<br>
+
+<input type="radio" name="q1" value=".push()">.push()<br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 2.
+
+<br>What is the main purpose of HTML in a website?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q2" value="Style">Style<br>
+
+<input type="radio" name="q2" value="Structure">Structure<br>
+
+<input type="radio" name="q2" value="Functionality">Functionalitybr>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 3.
+
+<br>In CSS, what does the A stand for in HSLA?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q3" value="Alpha">Alpha<br>
+
+<input type="radio" name="q3" value="Ancient">Ancient<br>
+
+<input type="radio" name="q3" value="Ambiguous">Ambiguous<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 4.
+
+<br> In CSS, how do you add content before an element?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q4" value="::after">::after<br>
+
+<input type="radio" name="q4" value="::before">::before<br>
+
+<input type="radio" name="q4" value="::add-content">::add-content<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 5.
+
+<br> In JavaScript, which of the following methods returns the milliseconds in the specified date according to local time?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q5" value="getMilliseconds()">getMilliseconds()<br>
+
+<input type="radio" name="q5" value="getMinutes()">getMinutes()<br>
+
+<input type="radio" name="q5" value="getTheMillisecondsNow()">getTheMillisecondsNow()<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 6.
+
+<br>In CSS, what is the name of the rule that will override CSS style for an element?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q6" value="!specific">!specific<br>
+
+<input type="radio" name="q6" value="!override">!override<br>
+
+<input type="radio" name="q6" value="!important">!important<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 7.
+
+<br>In HTML, what is a span tag?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q7" value="A generic inline container for grouping content">A generic inline container for grouping content<br>
+
+<input type="radio" name="q7" value="A container used to only header content">A container used to only header content<br>
+
+<input type="radio" name="q7" value="A container used to only group footer links">A container used to only group footer links<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+
+
+
+<input type="button"value="Grade Me"onClick="getScore(this.form);">
+
+
+<input type="reset" value="Clear"><p>
+
+Number of score out of 7 = <input style="margin-bottom: 30px;" type= "text" size="15" name= "mark">
+
+Score in percentage = <input style="margin-bottom: 30px;" type="text" size="15" name="percentage"><br>
+
+</form>
+
+<p>
+
+<form method="post" name="Form" onsubmit="" action="">
+
+</form>
+
+</body>
+
+<script>
+
+var numQues = 7;
+
+var numChoi = 3;
+
+var answers = new Array(7);
+
+answers[0] = ".push()";
+
+answers[1] = "Structure";
+
+answers[2] = "Alpha";
+
+answers[3] = "::before";
+
+answers[4] = "getMilliseconds()";
+
+answers[5] = "!important";
+
+answers[6] = "A generic inline container for grouping content";
+
+
+
+
+function getScore(form) {
+
+var score = 0;
+
+var currElt;
+
+var currSelection;
+
+for (i=0; i<numQues; i++) {
+
+currElt = i*numChoi;
+
+answered=false;
+
+for (j=0; j<numChoi; j++) {
+
+currSelection = form.elements[currElt + j];
+
+if (currSelection.checked) {
+
+answered=true;
+
+if (currSelection.value == answers[i]) {
+
+score++;
+
+break;
+
+}
+
+}
+
+}
+
+if (answered ===false){alert("Do answer all the questions, Please") ;return false;}
+
+}
+
+var scoreper = Math.round(score/numQues*100);
+
+form.percentage.value = scoreper + "%";
+
+form.mark.value=score;
+
+}
+
+</script>
+
+</html>

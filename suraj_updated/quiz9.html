@@ -1,0 +1,278 @@
+<html>
+
+<head>
+
+<title>Business/System Analysts Quiz</title>
+
+</head>
+
+<body>
+
+<!-------------This is the best Language translator---------->
+
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!--------ends here; the translator-------->
+
+<style>
+
+ @media only screen and (max-device-width: 1600px) {
+
+        
+    #google_translate_element {
+     
+   position: fixed;
+  top: 0px;
+  right: -7px;
+  z-index: 99;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 2px;
+}
+</style>
+<center><h1>Business/System Analysts</h1></center>
+
+<p>
+
+<form name="quiz">
+
+<p>
+
+<b>Question 1.
+
+<br>Which tool is used in business analyst? <br></b>
+
+<blockquote>
+
+<input type="radio" name="q1" value="My Sql">My Sql<br>
+
+<input type="radio" name="q1" value="MS Excel">My Excel<br>
+
+<input type="radio" name="q1" value="MS Access">MS Access<br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 2.
+
+<br>FMEA stands for?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q2" value="Functions Managed Extension Activities">Functions Managed Extension Activities<br>
+
+<input type="radio" name="q2" value="Failure Mode and Effect Anyalsis">Failure Mode and Effect Anyalsis<br>
+
+<input type="radio" name="q2" value="Functions Mode and Effects Analysis">Functions Mode and Effects Analysis<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 3.
+
+<br>_________ Analysis is used to analyze a system in terms of its requirements to identify its impact on customer satisfaction.<br></b>
+
+<blockquote>
+
+<input type="radio" name="q3" value="Kano">Kano<br>
+
+<input type="radio" name="q3" value="Paretto">Paretto<br>
+
+<input type="radio" name="q3" value="Root Cause">Root Cause<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 4.
+
+<br>The ______ Technique is used to give priority to various items in a process<br></b>
+
+<blockquote>
+
+<input type="radio" name="q4" value="Pair-Choice">Pair-Choice<br>
+
+<input type="radio" name="q4" value="Paretto">Paretto<br>
+
+<input type="radio" name="q4" value="Impact">Impact<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 5.
+
+<br>Which of the following is not one of the three major classes of information systems?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q5" value="Management information system">Management information system<br>
+
+<input type="radio" name="q5" value="Transaction processing system">Transaction processing system<br>
+
+<input type="radio" name="q5" value="Collaboration system">Collaboration system<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 6.
+
+<br>Which type of information systems automates handling of data about business activities?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q6" value="Decision support system">Decision support system<br>
+
+<input type="radio" name="q6" value="Management information system">Management information system<br>
+
+<input type="radio" name="q6" value="Transaction processing system">Transaction processing system<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 7.
+
+<br>Which of the following is the process of investigating a system, identifying problems, and using the information to recommend improvements to the system?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q7" value="System Analysis">System Analysis<br>
+
+<input type="radio" name="q7" value="Planning">Planning<br>
+
+<input type="radio" name="q7" value="System Design">System Design<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+
+
+
+<input type="button"value="Grade Me"onClick="getScore(this.form);">
+
+
+<input type="reset" value="Clear"><p>
+
+Number of score out of 7 = <input style="margin-bottom: 30px;" type= "text" size="15" name= "mark">
+
+Score in percentage = <input style="margin-bottom: 30px;" type="text" size="15" name="percentage"><br>
+
+</form>
+
+<p>
+
+<form method="post" name="Form" onsubmit="" action="">
+
+</form>
+
+</body>
+
+<script>
+
+var numQues = 7;
+
+var numChoi = 3;
+
+var answers = new Array(7);
+
+answers[0] = "My Excel";
+
+answers[1] = "Failure Mode and Effect Anyalsis";
+
+answers[2] = "Kano";
+
+answers[3] = "Pair-Choice";
+
+answers[4] = "Collaboration system";
+
+answers[5] = "Transaction processing system";
+
+answers[6] = "System Analysis";
+
+
+
+
+function getScore(form) {
+
+var score = 0;
+
+var currElt;
+
+var currSelection;
+
+for (i=0; i<numQues; i++) {
+
+currElt = i*numChoi;
+
+answered=false;
+
+for (j=0; j<numChoi; j++) {
+
+currSelection = form.elements[currElt + j];
+
+if (currSelection.checked) {
+
+answered=true;
+
+if (currSelection.value == answers[i]) {
+
+score++;
+
+break;
+
+}
+
+}
+
+}
+
+if (answered ===false){alert("Do answer all the questions, Please") ;return false;}
+
+}
+
+var scoreper = Math.round(score/numQues*100);
+
+form.percentage.value = scoreper + "%";
+
+form.mark.value=score;
+
+}
+
+</script>
+
+</html>

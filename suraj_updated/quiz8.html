@@ -1,0 +1,277 @@
+<html>
+
+<head>
+
+<title>Psychology, Counselling & Social Work Quiz</title>
+
+</head>
+
+<body>
+
+<!-------------This is the best Language translator---------->
+
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!--------ends here; the translator-------->
+
+<style>
+
+ @media only screen and (max-device-width: 1600px) {
+
+        
+    #google_translate_element {
+     
+   position: fixed;
+  top: 0px;
+  right: -7px;
+  z-index: 99;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 2px;
+}
+</style>
+<center><h1>Psychology, Counselling & Social Work</h1></center>
+
+<p>
+
+<form name="quiz">
+
+<p>
+
+<b>Question 1.
+
+<br>Patients with schizophrenia will most likely display ____ in their brains.<br></b>
+
+<blockquote>
+
+<input type="radio" name="q1" value="Blood clots">Blood clots<br>
+
+<input type="radio" name="q1" value="Enlarged ventricles">Enlarged ventricles<br>
+
+<input type="radio" name="q1" value="Discoloratiom of connectives tissues">Discoloratiom of connectives tissues<br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 2.
+
+<br>Which type of behavior modification relies on consequences?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q2" value="Classical conditioning">Classical conditioning<br>
+
+<input type="radio" name="q2" value="Operant conditioning">Operant conditioning<br>
+
+<input type="radio" name="q2" value="Aversion therapy">Aversion therapy<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 3.
+
+<br>According to Freud, which inner force contains the libido?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q3" value="Superid">Superid<br>
+
+<input type="radio" name="q3" value="Ego">Ego<br>
+
+<input type="radio" name="q3" value="Id">Id<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 4.
+
+<br>Which of these is not one of Freud’s stages of psychosexual development?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q4" value="Phallic">Phallic<br>
+
+<input type="radio" name="q4" value="Curious">v<br>
+
+<input type="radio" name="q4" value="Oral">Oral<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 5.
+
+<br>Which of these might be prescribed to a patient who has been diagnosed with major depressive disorder?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q5" value="Norepinephrine">Norepinephrine<br>
+
+<input type="radio" name="q5" value="SSRI">SSRI<br>
+
+<input type="radio" name="q5" value="Acetylcholine">Acetylcholine<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 6.
+
+<br>What is the name of the book that holds the diagnosis criteria and overview of all documented psychological disorders?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q6" value="Overview and Criteria of Current Mental Disorders">Overview and Criteria of Current Mental Disorders<br>
+
+<input type="radio" name="q6" value="APA Manual of Psychological Disorders">APA Manual of Psychological Disorders<br>
+
+<input type="radio" name="q6" value="Diagnostic and Statistical Manual of Mental Disorders">Diagnostic and Statistical Manual of Mental Disorders<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 7.
+
+<br>In Maslow’s hierarchy of needs, which needs are considered the most primary? <br></b>
+
+<blockquote>
+
+<input type="radio" name="q7" value="Physiological">Physiological<br>
+
+<input type="radio" name="q7" value="Esteem">Esteem<br>
+
+<input type="radio" name="q7" value="Love/Belonging">Love/Belonging<br>
+
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+
+
+
+<input type="button"value="Grade Me"onClick="getScore(this.form);">
+
+<input type="reset" value="Clear"><p>
+
+Number of score out of 7 = <input style="margin-bottom: 30px;" type= "text" size="15" name= "mark">
+
+Score in percentage = <input style="margin-bottom: 30px;" type="text" size="15" name="percentage"><br>
+
+</form>
+
+<p>
+
+<form method="post" name="Form" onsubmit="" action="">
+
+</form>
+
+</body>
+
+<script>
+
+var numQues = 7;
+
+var numChoi = 3;
+
+var answers = new Array(7);
+
+answers[0] = "Bad breath";
+
+answers[1] = "Operant conditioning";
+
+answers[2] = "Id";
+
+answers[3] = "Curious";
+
+answers[4] = "To treat diseases and injuries to the dental pulp so as to conserve a tooth that will otherwise have to be extracted";
+
+answers[5] = "Diagnostic and Statistical Manual of Mental Disorders";
+
+answers[6] = "Physiological";
+
+
+
+
+function getScore(form) {
+
+var score = 0;
+
+var currElt;
+
+var currSelection;
+
+for (i=0; i<numQues; i++) {
+
+currElt = i*numChoi;
+
+answered=false;
+
+for (j=0; j<numChoi; j++) {
+
+currSelection = form.elements[currElt + j];
+
+if (currSelection.checked) {
+
+answered=true;
+
+if (currSelection.value == answers[i]) {
+
+score++;
+
+break;
+
+}
+
+}
+
+}
+
+if (answered ===false){alert("Do answer all the questions, Please") ;return false;}
+
+}
+
+var scoreper = Math.round(score/numQues*100);
+
+form.percentage.value = scoreper + "%";
+
+form.mark.value=score;
+
+}
+
+</script>
+
+</html>
