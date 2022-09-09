@@ -1,48 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="indexxx.html">
-<link rel="stylesheet" href="Cyber.html">
-
-
-<title>Carrer Development and Planning Tool </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link media="all" rel="stylesheet" href="style.css">
+    <title>Employability</title>
 </head>
 <body>
-
-<div class="quiz-container" id="quiz">
-    <div class="quiz-header">
-	<h2><blink>WELCOME TO  </blink></h2>
-        <h2> Carrer Development and Planning Tool </h2>
-            <p> Are you searching perfect role that suits you? <Br>
-			This page perfect for you.</p>
-
-             <p> Just press Career Choices and get started with your quizes.</P>
-
-             </div>
-
-     <div class="dropdown">
-  <button class="dropbtn">Career Choices </button>
-  <div class="dropdown-content">
-  <a href="indexxx.html"> Pharmecy Career</a>
-  <a href="Cyber.html">Cyber Security Role</a>
-  <a href="website.html">Website Developer</a>
-  <a href="Software.html">Software Developer</a>
-  <a href="Chef.html">Professional Chefs</a>
-
-  
-  </div>
- 
-           
-
+    <div class="quarter q-red"></div>
+    <div class="mid-section" id="upload-page" style="display: none;">
+        <h1>Upload Your Resume</h1>
+        <div style="font-size: 20px;">
+            <div id="levelText">
+                Career Level:
+                <span id="levelSelected"></span>
+                <span id="changeLevel">(Change)</span>
+                <span id="levelSelect">
+                    <select id="levelSelector" name="level">
+                        <option value="" disabled>Select a level</option>
+                        <option value="intern">Intern Level</option>
+                        <option value="entry">Entry Level</option>
+                        <option value="mid">Mid Level</option>
+                        <option value="senior">Senior Level</option>
+                    </select>
+                </span>
+            </div>
+        </div>
+        <div class="upload-section" id="upload-section">
+            <div class="upload-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                </svg>
+            </div>
+            <input type="file" name="resume" id="resume">
+            <div>
+                <p>Click the button above or drop your resume in here.</p>
+                <p>English resumes in <strong>PDF</strong> or <strong>DOCX</strong> only. Max 2MB file size.</p>
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Upload" class="button black-button" id="goToConfirm" />
+        </div>
     </div>
-
-   
-
-
-
-
-
+    <div class="mid-section" id="confirm-page" style="background-color: transparent; display:none;">
+        <h1>Confirm</h1>
+        <div>
+            <p style="text-align: center; margin-bottom: 20px;">Are you sure you want to upload this resume?</p>
+            <p>
+                Your resume will be ranked based on the following criteria:
+                <ul style="margin-bottom: 40px;">
+                    <li>Your resume must be in <strong>PDF</strong> or <strong>DOCX</strong> format.</li>
+                    <li>Your resume must be less than 2MB in size.</li>
+                    <li>Your resume must be in English.</li>
+                    <li>Your resume must be in the <strong>intern</strong>, <strong>entry</strong>, <strong>mid</strong>, or <strong>senior</strong> level.</li>
+                </ul>
+            </p>
+            <div>
+                <p>If you confirm, enter your email address below:</p>
+                <input type="email" name="email" id="email" placeholder="Enter your email address" />
+            </div>
+        </div>
+        <div class="buttons-row">
+            <button class="button white-button" id="goBack">Go Back</button>
+            <button class="button white-button" id="confirmResume">Submit</button>
+        </div>
+    </div>
+    <div class="mid-section" id="sending-page" style="background-color: transparent;">
+        <div class="spinner-icon"></div>
+    </div>
+    <div class="mid-section" id="success-page" style="display: none;">
+        <h1>Success</h1>
+        <div>
+            <p>Your resume has been successfully uploaded.</p>
+            <p>You will receive an email with your resume ranking shortly.</p>
+        </div>
+    </div>
+    <div class="quarter q-blue"></div>
+    <script type="application/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="application/javascript" src="main.js"></script>
 </body>
 </html>
