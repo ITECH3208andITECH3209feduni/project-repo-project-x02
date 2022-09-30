@@ -1,0 +1,194 @@
+<!DOCTYPE html >
+<html lang="en" style="zoom: 85%; margin-top: 20px;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link media="all" rel="stylesheet" href="style.css" />
+    <title>Employability</title>
+  </head>
+  <body>
+    
+    <button style="padding: 5px; position: absolute; right: 2%; top: 2%; font-size: 18px;" onclick="window.location.href='http://localhost/registeration-login-system-master/portals.html';">Go back to assessment portals</button>
+
+    <div class="quarter q-red"></div>
+    <div class="mid-section" id="upload-page" style="display: none">
+      <h1>Upload Your Resume</h1>
+      <div style="font-size: 20px">
+        <div id="levelText">
+          Career Level:
+          <span id="levelSelected"></span>
+          <span id="changeLevel">(Change)</span>
+          <span id="levelSelect">
+            <select id="levelSelector" name="level">
+              <option value="" disabled>Select a level</option>
+              <option value="intern">Intern Level</option>
+              <option value="entry">Entry Level</option>
+              <option value="mid">Mid Level</option>
+              <option value="senior">Senior Level</option>
+            </select>
+          </span>
+        </div>
+      </div>
+      <div class="upload-section" id="upload-section">
+        <div class="upload-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+            />
+          </svg>
+        </div>
+        <input type="file" name="resume" id="resume" multiple />
+        <div>
+          <p>Click the button above or drop your resume in here.</p>
+          <p>
+            English resumes in <strong>PDF</strong>, <strong>DOCX</strong>,
+            <strong>JPEG</strong> or <strong>PNG</strong> only. Max 2MB file
+            size.
+          </p>
+        </div>
+      </div>
+      <div class="upload-section" id="uploadedFiles"></div>
+      <div>
+        <input
+          type="submit"
+          value="Upload"
+          class="button black-button"
+          id="goToConfirm"
+        />
+      </div>
+    </div>
+    <div
+      class="mid-section"
+      id="confirm-page"
+      style="background-color: transparent; display: none; margin-top: 80px;" 
+    >
+      <h1>Confirm</h1>
+      <div>
+        <p style="text-align: center; margin-bottom: 5px">
+          Are you sure you want to upload this resume?
+        </p>
+        <p style="margin-bottom: 10px">
+          Your resume will be ranked based on the following criteria:
+        </p>
+        <table style="width: 100%; margin-top: 10px">
+          <tr>
+            <th>Criteria</th>
+            <th>Points</th>
+          </tr>
+          <tr>
+            <td>Personal Information</td>
+            <td>10 Points</td>
+          </tr>
+          <tr>
+            <td>Job Objective</td>
+            <td>5 Points</td>
+          </tr>
+          <tr>
+            <td>Work and Related Experience</td>
+            <td>20 Points</td>
+          </tr>
+          <tr>
+            <td>Awards and Honours</td>
+            <td>10 Points</td>
+          </tr>
+          <tr>
+            <td>Activities and Hobbies</td>
+            <td>15 Points</td>
+          </tr>
+          <tr>
+            <td>Skills</td>
+            <td>15 Points</td>
+          </tr>
+          <tr>
+            <td>Social Media Information</td>
+            <td>10 Points</td>
+          </tr>
+          <tr>
+            <td>Career Level</td>
+            <td>5 Points</td>
+          </tr>
+          <tr>
+            <td>Resume Style</td>
+            <td>10 Points</td>
+          </tr>
+        </table>
+        <div>
+          <p>If you confirm, enter your email address below:</p>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email address"
+          />
+        </div>
+      </div>
+      <div class="buttons-row">
+        <button class="button white-button" id="goBack">Go Back</button>
+        <button class="button white-button" id="confirmResume">Submit</button>
+      </div>
+    </div>
+    <div
+      class="mid-section"
+      id="sending-page"
+      style="background-color: transparent"
+    >
+      <div class="spinner-icon"></div>
+    </div>
+    <div class="mid-section" id="success-page" style="display: none">
+      <h1>Success</h1>
+      <div>
+        <p>Your resume has been successfully uploaded.</p>
+        <p>Please review following result evaluation criteria:</p>
+        <h3 style="margin-top: 10px">Result Evaluation Table</h3>
+
+        <table style="width: 100%; margin-top: 10px">
+          <tr>
+            <th>Points</th>
+            <th>Evaluation</th>
+          </tr>
+          <tr>
+            <td>Above 90</td>
+            <td>Outstanding</td>
+          </tr>
+          <tr>
+            <td>Above 80 and lesser than 90</td>
+            <td>Excellent</td>
+          </tr>
+          <tr>
+            <td>Above 70 and lesser than 80</td>
+            <td>Good</td>
+          </tr>
+          <tr>
+            <td>Above 50 and lesser than 70</td>
+            <td>Fair</td>
+          </tr>
+          <tr>
+            <td>Lesser than 50</td>
+            <td>Failed</td>
+          </tr>
+        </table>
+        <p style="margin-top: 10px;">You will receive an email with feedback on your resume.</p>
+        <button class="button white-button" style="margin-top: 20px;" onclick="window.location.reload()">Upload Another Resume</button>
+      </div>
+    </div>
+    <div class="quarter q-blue"></div>
+    <script
+      type="application/javascript"
+      src="https://smtpjs.com/v3/smtp.js"
+    ></script>
+    <script>
+    let pageName = "index-page";
+    </script>
+    <script type="application/javascript" src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" style="zoom: 82%; margin-top: 20px;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link media="all" rel="stylesheet" href="style.css" />
+    <title>Employability</title>
+  </head>
+  <body>
+    <div class="quarter q-red"></div>
+    <div
+      class="mid-section"
+      id="sending-page"
+      style="background-color: transparent"
+    >
+      <div class="spinner-icon"></div>
+    </div>
+    <div class="mid-section" id="point-page" style="display: none">
+      <h1 style="margin-left: 8%; margin-top: 100px;">Evaluate</h1>
+      <p style="margin-bottom: 5px; font-size: 1.2rem; margin-left:85px;">
+        Mark the resume based on following criteria
+      </p>
+      <div>
+        
+        <table style="width: 120%; margin-left: auto; margin-right: auto; margin-top: 10px;">
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th style="width: 15%;">Score</th>
+              <th style="width: 25%">Total Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Personal Information</td>
+              <td class="td-with-input">
+                <input
+                  type="number"
+                  id="personal-info"
+                  name="personal-info"
+                  min="0"
+                  max="10"
+                  value="0"
+                  class="table-input"
+                  required
+                />
+              </td>
+              <td>10 Points</td>
+            </tr>
+            <tr>
+              <td>Job Objective</td>
+              <td class="td-with-input">
+                <input
+                  type="number"
+                  id="job-objective"
+                  name="job-objective"
+                  min="0"
+                  max="5"
+                  value="0"
+                  class="table-input"
+                  required
+                />
+              </td>
+              <td>5 Points</td>
+            </tr>
+            <tr>
+              <td>Work and Related Experience</td>
+              <td class="td-with-input">
+                <input
+                  type="number"
+                  id="work-experience"
+                  name="work-experience"
+                  min="0"
+                  max="20"
+                  value="0"
+                  class="table-input"
+                  required
+                />
+              </td>
+              <td>20 Points</td>
+            </tr>
+            <tr>
+              <td>Awards and Honours</td>
+              <td class="td-with-input">
+                <input
+                  type="number"
+                  id="awards"
+                  name="awards"
+                  min="0"
+                  max="10"
+                  value="0"
+                  class="table-input"
+                  required
+                />
+              </td>
+              <td>10 Points</td>
+            </tr>
+            <tr>
+              <td>Activities and Hobbies</td>
+              <td class="td-with-input">
+                <input
+                  type="number"
+                  id="activities"
+                  name="activities"
+                  min="0"
+                  max="15"
+                  value="0"
+                  class="table-input"
+                  required
+                />
+              </td>
+              <td>15 Points</td>
+            </tr>
+            <tr>
+              <td>Skills</td>
+              <td class="td-with-input">
+                <input
+                  type="number"
+                  id="skills"
+                  name="skills"
+                  min="0"
+                  max="15"
+                  value="0"
+                  class="table-input"
+                  required
+                />
+              </td>
+              <td>15 Points</td>
+            </tr>
+            <tr>
+              <td>Social Media Information</td>
+              <td class="td-with-input">
+                <input
+                  type="number"
+                  id="social-media"
+                  name="social-media"
+                  min="0"
+                  max="10"
+                  value="0"
+                  class="table-input"
+                  required
+                />
+              </td>
+              <td>10 Points</td>
+            </tr>
+            <tr>
+              <td>Career Level</td>
+              <td class="td-with-input">
+                <input
+                  type="number"
+                  id="career-level"
+                  name="career-level"
+                  min="0"
+                  max="5"
+                  value="0"
+                  class="table-input"
+                  required
+                />
+              </td>
+              <td>5 Points</td>
+            </tr>
+            <tr>
+              <td>Resume Style</td>
+              <td class="td-with-input">
+                <input
+                  type="number"
+                  id="resume-style"
+                  name="resume-style"
+                  min="0"
+                  max="10"
+                  value="0"
+                  class="table-input"
+                  required
+                />
+              </td>
+              <td>10 Points</td>
+            </tr>
+          </tbody>
+        </table>
+        <div>
+          <p style="margin-bottom: 10px; font-size: 1.2rem">
+            If you confirm, enter the receipient's email address:
+          </p>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              gap: 20px;
+              padding: 10px;
+              align-items: center;
+            "
+          >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <input
+              type="submit"
+              class="button white-button"
+              id="evaluateConfirmButton"
+              value="Confirm"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mid-section" id="confirm-page" style="display: none; margin-top: 100px;">
+      <h1>Evaluation Confirmation</h1>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+        "
+      >
+        <p style="margin-bottom: 10px">You marked the resume as following:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Personal Information</td>
+              <td><span id="personal-info-span"></span> out of 10 points</td>
+            </tr>
+            <tr>
+              <td>Job Objective</td>
+              <td><span id="job-objective-span"></span> out of 5 points</td>
+            </tr>
+            <tr>
+              <td>Work and Related Experience</td>
+              <td><span id="work-experience-span"></span> out of 20 points</td>
+            </tr>
+            <tr>
+              <td>Awards and Honours</td>
+              <td><span id="awards-span"></span> out of 10 points</td>
+            </tr>
+            <tr>
+              <td>Activities and Hobbies</td>
+              <td><span id="activities-span"></span> out of 15 points</td>
+            </tr>
+            <tr>
+              <td>Skills</td>
+              <td><span id="skills-span"></span> out of 15 points</td>
+            </tr>
+            <tr>
+              <td>Social Media Information</td>
+              <td><span id="social-media-span"></span> out of 10 points</td>
+            </tr>
+            <tr>
+              <td>Career Level</td>
+              <td><span id="career-level-span"></span> out of 5 points</td>
+            </tr>
+            <tr>
+              <td>Resume Style</td>
+              <td><span id="resume-style-span"></span> out of 10 points</td>
+            </tr>
+            <tr>
+              <td>Total Score</td>
+              <td><span id="total-score-span"></span> out of 100 points</td>
+            </tr>
+            <tr>
+              <td>Evaluation Rank</td>
+              <td>
+                <span id="rank-span"></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-bottom: 10px">
+          The evaluation will be sent to <span id="email-span"></span>
+        </p>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+          "
+        >
+          <button class="button white-button" id="confirmButton" >
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mid-section" id="success-page" style="display: none">
+      <h1>Success</h1>
+      <div>
+        <p>Your evaluation has been successfully sent to the given email.</p>
+        <p>Thank you for your contribution.</p>
+        <button class="button white-button" onclick="window.location.href=' http://localhost/registeration-login-system-master/logout.php';" style="margin-top: 10px;" >
+          Sign Out
+        </button>
+      </div>
+    </div>
+    <div class="quarter q-blue"></div>
+    <script
+      type="application/javascript"
+      src="https://smtpjs.com/v3/smtp.js"
+    ></script>
+    <script>
+      let pageName = "admin-page";
+    </script>
+    <script type="application/javascript" src="main.js"></script>
+  </body>
+</html>
